@@ -1,0 +1,90 @@
+object frmCDTypes: TfrmCDTypes
+  Left = 192
+  Top = 107
+  BorderIcons = [biSystemMenu, biMinimize]
+  BorderStyle = bsSingle
+  Caption = #1058'a'#1055#1067' CD'
+  ClientHeight = 94
+  ClientWidth = 261
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  Font.Style = []
+  OldCreateOrder = False
+  PixelsPerInch = 96
+  TextHeight = 13
+  object pnlMain: TPanel
+    Left = 0
+    Top = 0
+    Width = 261
+    Height = 94
+    Align = alClient
+    BevelInner = bvRaised
+    BevelOuter = bvLowered
+    Color = clInfoBk
+    TabOrder = 0
+    object gbMain: TGroupBox
+      Left = 4
+      Top = 4
+      Width = 253
+      Height = 69
+      Caption = 'CD:'
+      Color = clBtnFace
+      ParentColor = False
+      TabOrder = 0
+      object Label1: TLabel
+        Left = 8
+        Top = 16
+        Width = 11
+        Height = 13
+        Caption = 'id:'
+      end
+      object Label2: TLabel
+        Left = 8
+        Top = 40
+        Width = 31
+        Height = 13
+        Caption = 'nAmE:'
+      end
+      object eId: TDBEdit
+        Left = 40
+        Top = 16
+        Width = 57
+        Height = 19
+        Color = clSkyBlue
+        Ctl3D = False
+        DataField = 'id'
+        DataSource = DM.dsCDtypes
+        ParentCtl3D = False
+        ReadOnly = True
+        TabOrder = 0
+      end
+      object eName: TDBEdit
+        Left = 40
+        Top = 40
+        Width = 207
+        Height = 19
+        Ctl3D = False
+        DataField = 'name'
+        DataSource = DM.dsCDtypes
+        ParentCtl3D = False
+        TabOrder = 1
+      end
+    end
+    object dbnav: TDBNavigator
+      Left = 2
+      Top = 74
+      Width = 257
+      Height = 18
+      DataSource = DM.dsCDtypes
+      VisibleButtons = [nbFirst, nbPrior, nbNext, nbLast, nbInsert, nbEdit, nbPost, nbCancel, nbRefresh]
+      Align = alBottom
+      Flat = True
+      ParentShowHint = False
+      ShowHint = True
+      TabOrder = 1
+    end
+  end
+end
